@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+class Mahasiswa {
+public:
+    // Konstruktor
+    Mahasiswa(string nama, int umur, string jurusan) {
+        this->nama = nama;
+        this->umur = umur;
+        this->jurusan = jurusan;
+    }
+
+    // Fungsi untuk menampilkan informasi mahasiswa
+    void tampilInfo() {
+        cout << "Nama: " << nama << endl;
+        cout << "Umur: " << umur << " tahun" << endl;
+        cout << "Jurusan: " << jurusan << endl;
+    }
+
+private:
+    string nama;
+    int umur;
+    string jurusan;
+};
+
+int main() {
+    // Membuat objek mahasiswa
+    Mahasiswa mhs1("John Doe", 20, "Informatika");
+
+    // Mengakses dan menampilkan informasi mahasiswa
+    cout << "Informasi Mahasiswa:" << endl;
+    mhs1.tampilInfo();
+
+    return 0;
+}
